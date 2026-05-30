@@ -1,32 +1,62 @@
 #include <stdio.h>
+#include <string.h>
+#include <locale.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
-int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+int main(){
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    setlocale(LC_ALL, "Portuguese");
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+int i,j;
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+// torre move 5 para direita
+printf("\n\n---TORRE---\n");
 
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+for (i = 1; i <=5 ; i++)
+{
+    printf("-");
+}
+printf("> direita\n");
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
 
-    return 0;
+
+// rainha move 8 para a esquerda
+printf("\n---RAINHA---\n");
+
+printf("esquerda <");
+for (i = 1; i <= 8; i++)
+{
+    printf("-");
+}
+printf("\n");
+
+//bispo move 5 para diagonal direita
+
+printf ("\n---BISPO---\n");
+printf("diagonal direita\n");
+
+char mensagem[] = "-----^";
+int tamanho = strlen(mensagem);
+
+for (i = tamanho - 1 ; i>=0 ; i--)
+{
+    for (j = 0 ; j < i; j++)
+    {
+        printf("  ");
+    }
+    
+printf("%c\n", mensagem[i]);
+
+
+}
+//cavalo
+
+
+
+
+
+return 0;
+
+
 }
